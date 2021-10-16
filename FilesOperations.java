@@ -23,6 +23,19 @@ public class FilesOperations {
 	      
 	         writer1.println();
 	      }
+	      String filePath = "C:\\SHAMSHEER\\NumbersFile-1.txt";
+	      int input = 0;
+	      Scanner sc = new Scanner("C:\\SHAMSHEER\\NumbersFile-1.txt");
+	     // FileWriter writer = new FileWriter("C:\\SHAMSHEER\\NumbersFile-1.txt");
+	      Set<Integer> set = new HashSet<>();
+	      while (sc.hasNextLine()) {
+	         input = Integer.parseInt(sc.next());
+	           set.add(input);
+	            writer1.append(input+"\n");
+	      }
+	      writer1.flush();
+	      System.out.println("Contents added............"+set);
+
 	      writer1.close();
 	      PrintWriter writer2 = new PrintWriter(new File("C:\\SHAMSHEER\\NumbersFile-2.txt"));
 	      Random rand2 = new Random();
@@ -36,19 +49,6 @@ public class FilesOperations {
 	         writer2.println();
 	      }
 	      writer2.close();
-	      String filePath = "C:\\SHAMSHEER\\NumbersFile-1.txt";
-	      String input = "";
-	      Scanner sc = new Scanner(new File(filePath));
-	      FileWriter writer = new FileWriter("C:\\SHAMSHEER\\NumbersFile-1.txt");
-	      Set set = new HashSet();
-	      while (sc.hasNextLine()) {
-	         input = sc.nextLine();
-	         if(set.add(input)) {
-	            writer1.append(input+"\n");
-	         }
-	      }
-	      writer1.flush();
-	      System.out.println("Contents added............");
-
+	
 	}
 }
