@@ -49,6 +49,18 @@ public class FilesOperations {
 	         writer2.println();
 	      }
 	      writer2.close();
-	
+	      String filePath2 = "C:\\SHAMSHEER\\NumbersFile-1.txt";
+	      int input2 = 0;
+	      Scanner sc2 = new Scanner("C:\\SHAMSHEER\\NumbersFile-2.txt");
+	     // FileWriter writer = new FileWriter("C:\\SHAMSHEER\\NumbersFile-1.txt");
+	      Set<Integer> set2= new HashSet<>();
+	      while (sc.hasNextLine()) {
+	         input2 = Integer.parseInt(sc2.next());
+	           set2.add(input);
+	            writer2.append(input+"\n");
+	      }
+	      writer2.flush();
+	      System.out.println("Contents added............"+set);
+
 	}
 }
