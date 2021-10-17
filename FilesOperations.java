@@ -27,11 +27,12 @@ public class FilesOperations {
 	      String fileName="C:\\SHAMSHEER\\NumbersFile-1.txt";
 	      Scanner inputStream=null;
 	      inputStream = new Scanner(new File(fileName));
-	      String[] address = new String[500];
+	      String[] address = new String[100];
 	      int i = 0;
 	          while (inputStream.hasNextLine()) {
 	              String email = inputStream.nextLine();
-	              System.out.println(email);
+	              // System.out.println(email);
+	               address[i] = email.replace(" ", "")+" ";// add a space at the end of the line
 
 	             char ch1,ch2; //Variables to compare charachters
 	             String result ="";//Variable to store the final result
