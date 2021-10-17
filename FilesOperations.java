@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
@@ -23,23 +24,31 @@ public class FilesOperations {
 	      
 	         writer1.println();
 	      }
-	      String filePath = "C:\\SHAMSHEER\\NumbersFile-1.txt";
-	      int input = 0;
-	      Scanner sc = new Scanner("C:\\SHAMSHEER\\NumbersFile-1.txt");
-	     // FileWriter writer = new FileWriter("C:\\SHAMSHEER\\NumbersFile-1.txt");
-	      Set<Integer> set = new HashSet<>();
-	      while (sc.hasNextLine()) {
-	         input = Integer.parseInt(sc.next());
-	           set.add(input);
-	            writer1.append(input+"\n");
-	      }
-	      writer1.flush();
-	      System.out.println("Contents added............"+set);
+	      String fileName="C:\\SHAMSHEER\\NumbersFile-1.txt";
+	      Scanner inputStream=null;
+	      inputStream = new Scanner(new File(fileName));
+	      String[] address = new String[500];
+	      int i = 0;
+	          while (inputStream.hasNextLine()) {
+	              String email = inputStream.nextLine();
+	              System.out.println(email);
 
-	      writer1.close();
+	             char ch1,ch2; //Variables to compare charachters
+	             String result ="";//Variable to store the final result
+	              for(int j=0; j<address[i].length()-1; j++){
+	                  ch1=address[i].charAt(j); // get the first character
+	                  ch2=address[i].charAt(j+1); // get the next character 
+	                 if(ch1!=ch2) {// compare first and second, second and third ..., and so on; if not equal add to result            
+	                 result = result + ch1;
+	                 }
+	               }
+	             char [] res = result.toCharArray();
+	             System.out.println(Arrays.toString(res)); // Printing the result
+	             i++;
+	       }
 	      PrintWriter writer2 = new PrintWriter(new File("C:\\SHAMSHEER\\NumbersFile-2.txt"));
 	      Random rand2 = new Random();
-	      int number2, count2=0; 
+	      int number2, count2=0;
 	      while(count2!=400)
 	      {
 	            number2=rand2.nextInt(400)+1;
@@ -49,18 +58,5 @@ public class FilesOperations {
 	         writer2.println();
 	      }
 	      writer2.close();
-	      String filePath2 = "C:\\SHAMSHEER\\NumbersFile-1.txt";
-	      int input2 = 0;
-	      Scanner sc2 = new Scanner("C:\\SHAMSHEER\\NumbersFile-2.txt");
-	     // FileWriter writer = new FileWriter("C:\\SHAMSHEER\\NumbersFile-1.txt");
-	      Set<Integer> set2= new HashSet<>();
-	      while (sc.hasNextLine()) {
-	         input2 = Integer.parseInt(sc2.next());
-	           set2.add(input);
-	            writer2.append(input+"\n");
-	      }
-	      writer2.flush();
-	      System.out.println("Contents added............"+set);
-
 	}
 }
