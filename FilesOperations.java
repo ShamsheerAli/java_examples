@@ -4,8 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
@@ -24,29 +27,24 @@ public class FilesOperations {
 	      
 	         writer1.println();
 	      }
-	      String fileName="C:\\SHAMSHEER\\NumbersFile-1.txt";
-	      Scanner inputStream=null;
-	      inputStream = new Scanner(new File(fileName));
-	      String[] address = new String[100];
+	      writer1.close();
+	      Scanner scanner = new Scanner(new File("C:\\SHAMSHEER\\NumbersFile-1.txt"));
+	      int [] duplicates1 = new int [200];
+	      Set<Integer> duplicatesSet1=new HashSet<>();
+	      List<Integer> duplicatesList1=new ArrayList<>();
 	      int i = 0;
-	          while (inputStream.hasNextLine()) {
-	              String email = inputStream.nextLine();
-	              // System.out.println(email);
-	               address[i] = email.replace(" ", "")+" ";// add a space at the end of the line
-
-	             char ch1,ch2; //Variables to compare charachters
-	             String result ="";//Variable to store the final result
-	              for(int j=0; j<address[i].length()-1; j++){
-	                  ch1=address[i].charAt(j); // get the first character
-	                  ch2=address[i].charAt(j+1); // get the next character 
-	                 if(ch1!=ch2) {// compare first and second, second and third ..., and so on; if not equal add to result            
-	                 result = result + ch1;
-	                 }
-	               }
-	             char [] res = result.toCharArray();
-	             System.out.println(Arrays.toString(res)); // Printing the result
-	             i++;
-	       }
+	      while(scanner.hasNextInt())
+	      {
+	           duplicates1[i++] = scanner.nextInt();
+	      }
+	      for(int j=0; j<duplicates1.length;j++) {
+	    	  duplicatesSet1.add(duplicates1[j++]);
+	    	  System.out.println(duplicates1[j]);
+	      }
+	      duplicatesList1.addAll(duplicatesSet1);
+	      Collections.sort(duplicatesList1);
+	      System.out.println("...................."+duplicatesSet1);
+	      System.out.println("--------------------"+duplicatesList1);
 	      PrintWriter writer2 = new PrintWriter(new File("C:\\SHAMSHEER\\NumbersFile-2.txt"));
 	      Random rand2 = new Random();
 	      int number2, count2=0;
