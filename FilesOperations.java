@@ -43,8 +43,12 @@ public class FilesOperations {
 	      }
 	      duplicatesList1.addAll(duplicatesSet1);
 	      Collections.sort(duplicatesList1);
-	      System.out.println("...................."+duplicatesSet1);
 	      System.out.println("--------------------"+duplicatesList1);
+	      FileWriter newWriter=new FileWriter("C:\\SHAMSHEER\\NumbersFile-3.txt");
+	      for (Integer values1: duplicatesList1) {
+	    	  newWriter.write(values1+System.lineSeparator());
+	      }
+	      newWriter.close();
 	      PrintWriter writer2 = new PrintWriter(new File("C:\\SHAMSHEER\\NumbersFile-2.txt"));
 	      Random rand2 = new Random();
 	      int number2, count2=0;
@@ -57,5 +61,21 @@ public class FilesOperations {
 	         writer2.println();
 	      }
 	      writer2.close();
+	      Scanner sc = new Scanner(new File("C:\\SHAMSHEER\\NumbersFile-2.txt"));
+	      int [] duplicates2 = new int [400];
+	      Set<Integer> duplicatesSet2=new HashSet<>();
+	      List<Integer> duplicatesList2=new ArrayList<>();
+	      int a = 0;
+	      while(sc.hasNextInt()) 
+	      {
+	           duplicates2[a++] = sc.nextInt();
+	      }
+	      for(int j=0; j<duplicates2.length;j++) {
+	    	  duplicatesSet2.add(duplicates2[j++]);
+	    	  System.out.println(duplicates2[j]);
+	      }
+	      duplicatesList2.addAll(duplicatesSet2);
+	      Collections.sort(duplicatesList2);
+	      System.out.println("--------------------"+duplicatesList2);
 	}
 }
