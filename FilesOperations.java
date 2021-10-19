@@ -39,16 +39,17 @@ public class FilesOperations {
 	      }
 	      for(int j=0; j<duplicates1.length;j++) {
 	    	  duplicatesSet1.add(duplicates1[j++]);
-	    	  System.out.println(duplicates1[j]);
+	    	  //System.out.println(duplicates1[j]);
 	      }
 	      duplicatesList1.addAll(duplicatesSet1);
 	      Collections.sort(duplicatesList1);
-	      System.out.println("--------------------"+duplicatesList1);
+	      //System.out.println("--------------------"+duplicatesList1);
 	      FileWriter newWriter=new FileWriter("C:\\SHAMSHEER\\NumbersFile-3.txt");
 	      for (Integer values1: duplicatesList1) {
 	    	  newWriter.write(values1+System.lineSeparator());
 	      }
 	      newWriter.close();
+	      System.out.println("The No.of Elements in File 3: "+ duplicatesList1.size());
 	      PrintWriter writer2 = new PrintWriter(new File("C:\\SHAMSHEER\\NumbersFile-2.txt"));
 	      Random rand2 = new Random();
 	      int number2, count2=0;
@@ -72,10 +73,28 @@ public class FilesOperations {
 	      }
 	      for(int j=0; j<duplicates2.length;j++) {
 	    	  duplicatesSet2.add(duplicates2[j++]);
-	    	  System.out.println(duplicates2[j]);
+	    	 // System.out.println(duplicates2[j]);
 	      }
 	      duplicatesList2.addAll(duplicatesSet2);
 	      Collections.sort(duplicatesList2);
-	      System.out.println("--------------------"+duplicatesList2);
+	    //  System.out.println("--------------------"+duplicatesList2);
+	      FileWriter newWriter2=new FileWriter("C:\\SHAMSHEER\\NumbersFile-4.txt");
+	      for (Integer values: duplicatesList2) {
+	    	  newWriter2.write(values+System.lineSeparator());
+	      }
+	      System.out.println("The NO.of Elements in File 4: "+ duplicatesList2.size());
+	      newWriter2.close();
+	      
+	      Set<Integer> finalSet=new HashSet<>();
+	      finalSet.addAll(duplicatesList1);
+	      finalSet.addAll(duplicatesList2);
+	    //  System.out.println("Final"+finalSet);
+	      FileWriter newWriter3=new FileWriter("C:\\SHAMSHEER\\NumbersFile-5.txt");
+	      for (Integer values: finalSet) {
+	    	  newWriter3.write(values+System.lineSeparator());
+	      }
+	      newWriter3.close();
+	      System.out.println("The No.of Elements in File 5: "+ finalSet.size());
+	      System.out.println("Done");
 	}
 }
