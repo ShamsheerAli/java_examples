@@ -1,27 +1,16 @@
 package java_examples;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import org.json.simple.JSONObject;
-public class CreatingJSONDocument {
+import java.util.ArrayList;
+import java.util.List;
+
+public class JSONfile {
    public static void main(String args[]) {
-      //Creating a JSONObject object
-      JSONObject jsonObject = new JSONObject();
-      //Inserting key-value pairs into the json object
-      jsonObject.put("ID", "1");
-      jsonObject.put("First_Name", "Shikhar");
-      jsonObject.put("Last_Name", "Dhawan");
-      jsonObject.put("Date_Of_Birth", "1981-12-05");
-      jsonObject.put("Place_Of_Birth", "Delhi");
-      jsonObject.put("Country", "India");
-      try {
-         FileWriter file = new FileWriter("E:/output.json");
-         file.write(jsonObject.toJSONString());
-         file.close();
-      } catch (IOException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
-      System.out.println("JSON file created: "+jsonObject);
+	   List<String> a = new ArrayList<String>();
+	   a.add("so 1");
+	   a.add("so 2");
+	   a.add("so 3");
+	   JSONArray jray = new JSONArray(a);
+
+	   System.out.println(jray.toString()); 
    }
 }
