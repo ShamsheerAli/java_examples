@@ -1,5 +1,5 @@
+//Program to know the comsuption of petrol
 package java_examples;
-
 public class Cities {
         String name;
         int distance;
