@@ -1,3 +1,4 @@
+//Program to konw the powers Of Two Numbers
 package java_examples;
 
 import java.util.Scanner;
