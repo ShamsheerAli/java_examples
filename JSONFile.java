@@ -30,7 +30,7 @@ public class JSONFile {
 		String[] emp_details2=Arrays.copyOfRange(fileDetails, 4, fileDetails.length);
 	
 		String[] emp_details=Arrays.copyOfRange(fileDetails, 0, 4);
-		System.out.println(emp_details.length);
+		System.out.println(emp_details.length/4);
 		int count=1;
 		for(int i=0;i<emp_details2.length;i++) {
 			if(i==0||i%4==0)
