@@ -28,9 +28,17 @@ public class JSONFile {
 			a+=value;
 		String[] fileDetails=a.split(",");
 		String[] emp_details2=Arrays.copyOfRange(fileDetails, 4, fileDetails.length);
-	
-		String[] emp_details=Arrays.copyOfRange(fileDetails, 0, 4);
-		System.out.println(emp_details.length/4);
+		String[] sample=Arrays.copyOfRange(fileDetails, 0, 4);
+		List<String> letters = Arrays.asList(sample);
+		List<String> results = new ArrayList<>();
+		int counter = 0;
+		for (int i=0;i<emp_details2.length;i++){
+		    results.add(letters.get(counter++));
+		    if(counter==letters.size()){
+		        counter=0;
+		    }
+		}
+		String[] emp_details=results.toArray(new String[0]);
 		int count=1;
 		for(int i=0;i<emp_details2.length;i++) {
 			if(i==0||i%4==0)
