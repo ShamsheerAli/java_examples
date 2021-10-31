@@ -1,3 +1,4 @@
+//Program to sell and buy the house
 package java_examples;
 
 import java.util.Scanner;
