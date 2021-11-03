@@ -11,6 +11,7 @@ public class JsonToCsv {
 	 Scanner sc=new Scanner(new File("C:\\SHAMSHEER\\Emp_JSON.txt"));
 	 String json=sc.nextLine();
 	 System.out.println(sc);
+	 System.out.println(json);
 	}
 
 }
