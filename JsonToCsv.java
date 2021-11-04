@@ -1,21 +1,17 @@
+//Program to Convert CSV File to JSON File
+package java_examples;
+
 import java.io.File;
-import org.apache.commons.io.FileUtils;
-import org.json.*;
-public class ConvertJsonToCSVTest {
-   public static void main(String[] args) throws JSONException {
-      String jsonArrayString = "{\"fileName\": [{\"first name\": \"Ravi\",\"last name\": \"Chandra\",\"location\": \"Bangalore\"}]}";
-      JSONObject output;
-      try {
-         output = new JSONObject(jsonArrayString);
-         JSONArray docs = output.getJSONArray("fileName");
-         File file = new File("EmpDetails.csv");
-         String csv = CDL.toString(docs);
-         FileUtils.writeStringToFile(file, csv);
-         System.out.println("Data has been Sucessfully Writeen to "+ file);
-         System.out.println(csv);
-      }
-      catch(Exception e) {
-         e.printStackTrace();
-      }
-   }
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class JsonToCsv {
+
+	public static void main(String[] args) throws Exception {
+	 Scanner sc=new Scanner(new File("C:\\SHAMSHEER\\Emp_JSON.txt"));
+	 String json=sc.nextLine();
+	 System.out.println(sc);
+	 System.out.println(json);
+	 
+	}
 }
