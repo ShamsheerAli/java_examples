@@ -2,7 +2,7 @@
 package java_examples;
 
 import java.io.BufferedReader;
-import java.io.File; 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -21,5 +21,9 @@ public class JsonToCsv {
 		reader.close();
 		String content = stringBuilder.toString();
 		System.out.println(content);
+		for(int i=0; i<content.length();i++) {
+			if(content.contains(" \t"))
+			
+		}
 	}
-} 
+}
