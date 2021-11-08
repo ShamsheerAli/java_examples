@@ -22,7 +22,6 @@ public class JsonToCsv {
 		String content = stringBuilder.toString();
 		System.out.println(content);
 		for(int i=0; i<content.length();i++) {
-			if(content.contains(" \t"))
 			
 		}
 	}
