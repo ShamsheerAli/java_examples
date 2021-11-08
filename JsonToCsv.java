@@ -21,8 +21,12 @@ public class JsonToCsv {
 		reader.close();
 		String content = stringBuilder.toString();
 		System.out.println(content);
+		String data=" ";
 		for(int i=0; i<content.length();i++) {
-			
+			if(content.contains("{"))
+				continue;
+			data+=content;
 		}
+		System.out.println(data);
 	}
 }
