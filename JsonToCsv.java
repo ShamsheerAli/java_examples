@@ -20,13 +20,12 @@ public class JsonToCsv {
 		stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 		reader.close();
 		String content = stringBuilder.toString();
-		System.out.println(content);
-		String data=" ";
+		//System.out.println(content);
+		String[] data=new String[2000];
 		for(int i=0; i<content.length();i++) {
-			if(content.contains("{"))
-				continue;
-			data+=content;
+			if(content=="Name")
+			data[i]=content;
+			System.out.println(data[i]);
 		}
-		System.out.println(data);
 	}
 }
