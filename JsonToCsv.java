@@ -1,4 +1,4 @@
-//Program to Convert CSV File to JSON File
+ //Program to Convert CSV File to JSON File
 package java_examples;
 
 import java.io.BufferedReader;
@@ -26,9 +26,6 @@ public class JsonToCsv {
 		String[] data=new String[500];
 		List<String> dataList=new ArrayList<>();
 		  dataList.add(content);
-		  System.out.println(dataList);
-		for(int i=0; i<content.length();i++) {
-			data[i]=content;  
-		}
+		  System.out.println(dataList);             
 	}
 }
