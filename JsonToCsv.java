@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JsonToCsv {
@@ -20,12 +22,13 @@ public class JsonToCsv {
 		stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 		reader.close();
 		String content = stringBuilder.toString();
-		//System.out.println(content);
-		String[] data=new String[2000];
+		  //System.out.println(content);
+		String[] data=new String[500];
+		List<String> dataList=new ArrayList<>();
+		  dataList.add(content);
+		  System.out.println(dataList);
 		for(int i=0; i<content.length();i++) {
-			if(content=="Name")
-			data[i]=content;
-			System.out.println(data[i]);
+			data[i]=content;  
 		}
 	}
 }
