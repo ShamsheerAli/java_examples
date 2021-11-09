@@ -22,8 +22,6 @@ public class JsonToCsv {
 		stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 		reader.close();
 		String content = stringBuilder.toString();
-		  //System.out.println(content);
-		String[] data=new String[500];
 		List<String> dataList=new ArrayList<>();
 		  dataList.add(content);
 		  System.out.println(dataList);             
