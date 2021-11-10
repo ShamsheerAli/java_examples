@@ -29,23 +29,20 @@ public class JsonToCsv {
 		content=content.replace("}", "");
 		content=content.replace("\"", "");
 		content=content.replace(",", "");
-		//content=content.replace(":", "");
 		content=content.replace(" ", "");
 		
 		String[] data=content.split(":");
-		for(int i=0; i<data.length;i++)
-		System.out.println(data[i]);
 		String[] data2=new String[data.length];
 		List<String> dataList=new ArrayList<>();
 		List<String> dataList2=new ArrayList<>();
-
-		  dataList.add(content);
-		  //System.out.println(dataList);       
 		  for(int i=0; i<data.length; i++) {
-			  if(data[i]=="Employee_Name")
-         	   data2[i]=data[i];
-			  System.out.println(data2[i]);
-
+			  dataList.add(data[i]);
           }
+		  System.out.println(dataList);     
+		  for(String value:dataList) {
+			  if(value=="Employee_Name")
+				  dataList2.add(value);
+          }
+		  System.out.println(dataList2);
 	}
 }
