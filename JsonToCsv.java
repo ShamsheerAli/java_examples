@@ -40,7 +40,7 @@ public class JsonToCsv {
           }
 		  System.out.println(dataList);     
 		  for(String value:dataList) {
-			  if(value=="Employee_Name")
+			  if(value=="Employee_Name, IsmailShaik")
 				  dataList2.add(value);
           }
 		  System.out.println(dataList2);
