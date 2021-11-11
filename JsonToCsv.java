@@ -39,11 +39,9 @@ public class JsonToCsv {
 			  dataList.add(data[i]);    
           }
 		  for(int i=0;i<data.length;i++) {
-			  if(data[i].contains("Employee_Name"))
+			  if(data[i].contains("Email"))
 				  dataList2.add(data[i]);
 		  }
-
-		 
 		  System.out.println(dataList2);
 	}
 }
