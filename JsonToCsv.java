@@ -36,13 +36,14 @@ public class JsonToCsv {
 		List<String> dataList=new ArrayList<>();
 		List<String> dataList2=new ArrayList<>();
 		  for(int i=0; i<data.length; i++) {
-			  dataList.add(data[i]);
+			  dataList.add(data[i]);    
           }
-		  System.out.println(dataList);     
-		  for(String value:dataList) {
-			  if(value=="Employee_Name, IsmailShaik")
-				  dataList2.add(value);
-          }
+		  for(int i=0;i<data.length;i++) {
+			  if(data[i].contains("Employee_Name"))
+				  dataList2.add(data[i]);
+		  }
+
+		 
 		  System.out.println(dataList2);
 	}
 }
