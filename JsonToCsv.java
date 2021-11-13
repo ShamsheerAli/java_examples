@@ -30,17 +30,21 @@ public class JsonToCsv {
 		}  
 		//System.out.println(data);
 		List<String> mylist=new ArrayList<>();
+		List<String> mylist2=new ArrayList<>();
+
 		mylist.add(data);
-		System.out.println(mylist);
+		//System.out.println(mylist);
 		String str1="";
 		String str2="";
 		String str3="";
 		for(int i=0;i<mylist.size();i++) {
-			for(int j=i+1;j<mylist.size(); j++) {
-				for(int k=j+1;k<mylist.size();k++) {
-					
-				}
-			}
+	          str3=mylist.get(i);
+	          str2=str3;
+	          str1=str2;
+	          if(str2.contains(":")) {
+	        	  mylist2.add(str3);
+	          } 
 		}
+		System.out.println(mylist2);
 	}
 }
