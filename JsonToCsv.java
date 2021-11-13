@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class JsonToCsv {
 	public static void main(String[] args) throws Exception {
+		String data="";
 		try  
 		{      
 		FileReader fr=new FileReader("C:\\SHAMSHEER\\Emp_JSON.txt");    
@@ -19,12 +20,17 @@ public class JsonToCsv {
 		sb.append("\n");       
 		}  
 		fr.close();  
-		System.out.println("Contents of File: ");  
-		System.out.println(sb.toString()); 
+		data= sb.toString(); 
 		}  
 		catch(IOException e)  
 		{  
 		e.printStackTrace();  
 		}  
+		System.out.println(data);
+		for(int i=0;i<data.length();i++) {
+			System.out.println(data.charAt(i));
+			if(i==1)
+				break;
+		}
 	}
 }
