@@ -4,6 +4,8 @@ package java_examples;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JsonToCsv {
 	public static void main(String[] args) throws Exception {
@@ -17,7 +19,7 @@ public class JsonToCsv {
 		while((line=br.readLine())!=null)  
 		{  
 		sb.append(line);        
-		sb.append("\n");       
+		sb.append("\n");   
 		}  
 		fr.close();  
 		data= sb.toString(); 
@@ -26,11 +28,19 @@ public class JsonToCsv {
 		{  
 		e.printStackTrace();  
 		}  
-		System.out.println(data);
-		for(int i=0;i<data.length();i++) {
-			System.out.println(data.charAt(i));
-			if(i==1)
-				break;
+		//System.out.println(data);
+		List<String> mylist=new ArrayList<>();
+		mylist.add(data);
+		System.out.println(mylist);
+		String str1="";
+		String str2="";
+		String str3="";
+		for(int i=0;i<mylist.size();i++) {
+			for(int j=i+1;j<mylist.size(); j++) {
+				for(int k=j+1;k<mylist.size();k++) {
+					
+				}
+			}
 		}
 	}
 }
