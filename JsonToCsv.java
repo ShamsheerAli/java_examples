@@ -28,12 +28,10 @@ public class JsonToCsv {
 		{  
 		e.printStackTrace();  
 		}  
-		//System.out.println(data);
 		List<String> mylist=new ArrayList<>();
 		List<String> mylist2=new ArrayList<>();
 
 		mylist.add(data);
-		//System.out.println(mylist);
 		String str1="";
 		String str2="";
 		String str3="";
