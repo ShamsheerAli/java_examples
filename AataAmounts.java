@@ -26,14 +26,16 @@ public class AataAmounts {
 			 * BufferedWriter b= new BufferedWriter(writer);
 			 * b.write(date+","+aata+","+grinder); 7 b.newLine(); b.close(); writer.close();
 			 */
+			String data="";
 			System.out.println("Data Entered Successfully");
 			Scanner reader = new Scanner(myfile);
 			while (reader.hasNextLine()) {
-				String data = reader.nextLine();
+				 data = reader.nextLine();
 				String[] words = data.split(",");
 				aataAmount.add(Integer.parseInt(words[1]));
 				grinderAmount.add(Integer.parseInt(words[2]));
 			}
+			System.out.println(data);
 			System.out.println("AataAmount: " + aataAmount);
 			System.out.println("GrinderAmount: " + grinderAmount);
 			reader.close();

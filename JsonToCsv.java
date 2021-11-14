@@ -1,48 +1,24 @@
  //Program to Convert Json File to Csv File
 package java_examples;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.util.Scanner;
 
 public class JsonToCsv {
 	public static void main(String[] args) throws Exception {
-		String data="";
-		try  
-		{      
-		FileReader fr=new FileReader("C:\\SHAMSHEER\\Emp_JSON.txt");    
-		BufferedReader br=new BufferedReader(fr);  
-		StringBuffer sb=new StringBuffer();      
-		String line;  
-		while((line=br.readLine())!=null)  
-		{  
-		sb.append(line);        
-		sb.append("\n");   
-		}  
-		fr.close();  
-		data= sb.toString(); 
-		}  
-		catch(IOException e)  
-		{  
-		e.printStackTrace();  
-		}  
-		List<String> mylist=new ArrayList<>();
-		List<String> mylist2=new ArrayList<>();
-
-		mylist.add(data);
 		String str1="";
 		String str2="";
 		String str3="";
-		for(int i=0;i<mylist.size();i++) {
-	          str3=mylist.get(i);
-	          str2=str3;
-	          str1=str2;
-	          if(str2.contains(":")) {
-	        	  mylist2.add(str3);
-	          } 
+		int count=0;
+		Scanner reader=new Scanner(new File("C:\\SHAMSHEER\\Emp_JSON.txt"));   
+		while (reader.hasNextLine()) {
+			reader.toString();
+		 str1 = reader.nextLine();
+		 str2=str1;
+		 str3=str2;
+		 if(str3==":")
+			 count++;
 		}
-		System.out.println(mylist2);
-	}
+		 System.out.println(count);
+		 System.out.println(str3);
+		}
 }
