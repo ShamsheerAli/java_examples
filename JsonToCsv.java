@@ -2,6 +2,8 @@
 package java_examples;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JsonToCsv {
@@ -22,5 +24,6 @@ public class JsonToCsv {
 		}
 		System.out.println(count);
 		System.out.println(str3);
+		List<String> list=new ArrayList<>();
 	}
 }
