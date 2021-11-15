@@ -10,6 +10,7 @@ public class JsonToCsv {
 		String str2 = "";
 		String str3 = "";
 		int count = 0;
+		int counter=0;
 		Scanner reader = new Scanner(new File("C:\\SHAMSHEER\\Emp_JSON.txt"));
 		while (reader.hasNextLine()) {
 			reader.toString();
