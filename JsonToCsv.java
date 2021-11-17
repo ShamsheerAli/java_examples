@@ -22,7 +22,6 @@ public class JsonToCsv {
 			if (str3 == ":")
 				count++;
 		}
-		//Full Confusion
 		System.out.println(count);
 		System.out.println(str3);
 		
