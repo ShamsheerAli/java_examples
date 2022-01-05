@@ -13,7 +13,6 @@ public class JumpGame {
 		for(int i=0; i<n; i++)
 			a[i]=sc.nextInt();
 		   System.out.println(canReach(a,n ));
-
 	}
 	 static int canReach(int[] A, int N) {
          for(int i=0; i<A.length; i++){
@@ -24,7 +23,6 @@ public class JumpGame {
             	 i+=A[i];
                  if(i>=N-1) {
                    return 1;
-                   
                  }
                i--;
              }
