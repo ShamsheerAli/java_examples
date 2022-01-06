@@ -1,10 +1,7 @@
 package java_examples;
-
 import java.util.Iterator;
 import java.util.Scanner;
-
 public class ProductArrayPuzzle {
-
 	public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter The Size Of Array");
