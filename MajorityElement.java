@@ -11,6 +11,8 @@ public class MajorityElement {
 		int[] a = new int[n];
 		int count = 0;
 		System.out.println("Enter The Elements!!");
+		for(int i=0; i<n; i++)
+			a[i]=sc.nextInt();
 		for (int i = 0; i < n; i++) {
 			count = 0;
 			for (int j = 0; j < n; j++) {
