@@ -7,15 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 
 class GFG {
-
 	static Integer[] arr = { 2, 5, 2, 8, 5, 6, 8, 8 };
-
 	public static void main(String[] args) {
 		List<Integer> list = Arrays.asList(arr);
 		sortBasedOnFrequencyAndValue(list);
 	}
-
-	// Compare Function
 	public static void sortBasedOnFrequencyAndValue(List<Integer> list) {
 		int n = arr.length;
 		final HashMap<Integer, Integer> mapCount = new HashMap<Integer, Integer>();
@@ -28,7 +24,6 @@ class GFG {
 				mapIndex.put(arr[i], i); // Map to capture 1st occurrence of elements
 			}
 		}
-
 		Collections.sort(list, new Comparator<Integer>() {
 			public int compare(Integer n1, Integer n2) {
 				int freq1 = mapCount.get(n1);
@@ -36,9 +31,7 @@ class GFG {
 				if (freq1 != freq2) {
 					return freq2 - freq1;
 				} else {
-					return mapIndex.get(n1) - mapIndex.get(n2); // Elements with Lesser
-																// Index gets Higher
-																// Priority
+					return mapIndex.get(n1) - mapIndex.get(n2); 																				
 				}
 			}
 		});
