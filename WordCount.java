@@ -28,7 +28,6 @@ public class WordCount {
 			}
 		}
 	}
-
 	public static class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 		private IntWritable result = new IntWritable();
 
