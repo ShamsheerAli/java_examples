@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Segregate0and1 {
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter The Size OF Array");
@@ -16,7 +15,6 @@ public class Segregate0and1 {
 			a[i] = sc.nextInt();
 		segregate(a);
 	}
-
 	public static void segregate(int[] a) {
 		List<Integer> list1 = new ArrayList<>();
 		List<Integer> list2 = new ArrayList<>();
