@@ -3,9 +3,7 @@ package java_examples;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class ArrayPuzzle {
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter The Size OF Array");
@@ -30,5 +28,4 @@ public class ArrayPuzzle {
 		}
 		System.out.println(list);
 	}
-
 }
