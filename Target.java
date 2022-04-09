@@ -16,7 +16,7 @@ public class Target {
     	   a[i]=sc.nextInt();
        for(int i=0; i<len; i++) {
     	   for(int j=0; j<len; j++) {
-    		   if(a[i]+a[j]==target)
+    		   if(a[i]+a[j]==target) 
     			   System.out.println("["+i+","+j+"]");
     	   }
        }
