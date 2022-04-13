@@ -1,5 +1,5 @@
+//Program of 2D Arrays
 package java_examples;
-
 public class TwoDArrays {
 
 	public static void main(String[] args) {
