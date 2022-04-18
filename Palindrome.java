@@ -7,7 +7,7 @@ public class Palindrome {
 	public static void main(String args[]){  
 		  int r,sum=0,temp;     
 		  Scanner sc= new Scanner(System.in);
-		  System.out.println("Enter The Number!!!!!!!!!11");
+		  System.out.println("Enter The Number!!!!!!!!!");
 		  int n=sc.nextInt(); 
 		  temp=n;    
 		  while(n>0){    
